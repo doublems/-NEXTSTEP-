@@ -31,6 +31,11 @@ public class calculationTest {
         Assert.assertEquals(73,StringCalculator.add("//%\\n3%67%3"));
     }
 
+    @Test(expected=RuntimeException.class)
+    public void stringCaluaterRuntimeException(){
+        StringCalculator.add("10,-3");
+    }
+
     @After
     public void end(){
         System.out.println("테스트 끝");

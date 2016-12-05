@@ -8,7 +8,10 @@ public class StringCalculator {
         if (numbers != null) {
             for (String ss : numbers) {
                 if(!ss.equals("")){
-                result += Integer.parseInt(ss);}
+                    if(Integer.parseInt(ss)<0){
+                        throw new RuntimeException("음수는 허용하지 않습니다.");
+                    }else {
+                result += Integer.parseInt(ss);}}
             }
         }
 
