@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/onion.iml" filepath="$PROJECT_DIR$/onion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/onion.iml" filepath="$PROJECT_DIR$/.idea/modules/onion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/onion_main.iml" filepath="$PROJECT_DIR$/.idea/modules/onion_main.iml" group="onion" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/onion_test.iml" filepath="$PROJECT_DIR$/.idea/modules/onion_test.iml" group="onion" />
     </modules>
   </component>
 </project>

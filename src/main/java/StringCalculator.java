@@ -2,7 +2,12 @@
  * Created by jerry on 2016-12-05.
  */
 public class StringCalculator {
-    public static int add(String s) {
+
+    public StringCalculator(){
+        System.out.println("##");
+    }
+
+    public  int add(String s) {
         int result = 0;
         String[] numbers = split(s);
         if (numbers != null) {
@@ -18,7 +23,7 @@ public class StringCalculator {
         return result;
     }
 
-    private static String[] split(String s) {
+    private String[] split(String s) {
         String[] numbers = null;
         if (s.contains(",")) {
             numbers = s.split(",");

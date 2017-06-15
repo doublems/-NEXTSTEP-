@@ -8,32 +8,41 @@ import org.junit.Test;
  */
 public class calculationTest {
 
+    //private  StringCalculator stringCalculator;
+    private  StringCalculator stringCalculator = new StringCalculator();
+
+    /*@Before
+    public void setup(){
+        stringCalculator = new StringCalculator();
+        System.out.println("Before");
+    }*/
+
     @Test
     public void stringCaluaterSumTestByComma(){
-        Assert.assertEquals(10,StringCalculator.add("7,3"));
+        Assert.assertEquals(10,stringCalculator.add("7,3"));
     }
 
     @Test
     public void stringCaluaterSumTestByColon(){
-        Assert.assertEquals(10,StringCalculator.add("7:3"));
+        Assert.assertEquals(10,stringCalculator.add("7:3"));
     }
 
     @Test
     public void stringCaluaterSumNullTest(){
-        Assert.assertEquals(0,StringCalculator.add(""));
+        Assert.assertEquals(0,stringCalculator.add(""));
     }
     @Test
     public void stringCaluaterSumSingleTest(){
-        Assert.assertEquals(10,StringCalculator.add("10"));
+        Assert.assertEquals(10,stringCalculator.add("10"));
     }
     @Test
     public void stringCaluaterSumTestbyCustomTag(){
-        Assert.assertEquals(73,StringCalculator.add("//%\\n3%67%3"));
+        Assert.assertEquals(73,stringCalculator.add("//%\\n3%67%3"));
     }
 
     @Test(expected=RuntimeException.class)
     public void stringCaluaterRuntimeException(){
-        StringCalculator.add("10,-3");
+        stringCalculator.add("10,-3");
     }
 
     @After
